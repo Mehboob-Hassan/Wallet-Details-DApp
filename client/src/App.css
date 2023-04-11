@@ -1,0 +1,94 @@
+.balances {
+
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background-color: #0c2434;
+  font-family: "Courier New", Courier, monospace;
+  min-height: 100vh;
+  padding-top: 5vw;
+  padding-bottom: 5vw;
+}
+
+.form-container {
+  height: 100vh;
+  /* margin-bottom: 5vw; */
+  border: 2px solid #afafcb81;
+  padding: 2vw 4vw;
+  background-color: #0c2434;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.balances Form {
+  width: 100%;
+  /* background-color: rgba(0, 0, 255, 0.429); */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 5vw;
+}
+
+.balances Form .input {
+  width: 30vw;
+}
+
+.resulCard {
+  
+  font-family: 'Courier', Courier, monospace;
+  background-color: #0c2434;
+  width: 70vw;
+}
+
+.resulCard h3 {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading {
+  color: wheat;
+}
+
+Form {
+  width: 30vw;
+
+}
+
+Form Form.Control {
+  background: transparent;
+}
+
+Form Button {
+  margin: 1.5vw;
+  margin-bottom: 4vw;
+  background-color: #23475f;
+}
+
+.form-container Form {
+  margin-top: 8vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  border-radius: 10px;
+  height: 15vw;
+
+}
+
+.result-container .resulCard {
+  background: #343b6b;
+  color: white;
+}
+
+.footer {
+  font-size: 1.5vw;
+  color: white;
+  display: flex;
+  padding: 2rem 0;
+  margin-top: 2vw;
+  justify-content: center;
+  align-items: center;
+
+}
