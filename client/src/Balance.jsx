@@ -20,7 +20,7 @@ export default function Balances() {
         setBalances(data);
       })
       .catch((err) => {
-        console.log(err);
+        console.log("Error in Axios", err);
       })
       .finally(() => {
         setLoading(false);
