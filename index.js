@@ -8,9 +8,6 @@ const { EvmChain } = require("@moralisweb3/common-evm-utils");
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(express.json());
-
-// allow access to React app domain
 app.use(
   cors({
     origin: true,
@@ -18,6 +15,9 @@ app.use(
     credentials: true,
   })
 );
+app.use(express.json());
+
+// allow access to React app domain
 
 const MORALIS_API_KEY = "3Tq2sz8cAC1PwpHHBvPg1thKEcQZTtWFHFZhF1ouY14r8lSbfUt9Zhugf8E6kMMV";
 // const address = "0x54C4b929e93fF55FB93c93D43777C373f5131c1D";

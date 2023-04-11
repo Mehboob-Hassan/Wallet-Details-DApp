@@ -40,7 +40,7 @@ export default function Balances() {
     <>
       <div className='balances'>
         <Container className='form-container'>
-          <div className='heading'>
+          <div className='heading mt-5'>
             <h2>Moralis Account Details DApp</h2>
             <h4>Get your wallet Balances by only giving your wallet address</h4>
           </div>
