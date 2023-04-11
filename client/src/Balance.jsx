@@ -15,7 +15,8 @@ export default function Balances() {
 
   const fetchData = async () => {
     setLoading(true);
-    axios.post('http://localhost:5000/balances', { address, chain })
+    // axios.post('http://localhost:5000/balances', { address, chain })
+    axios.post('/balances', { address, chain })
       .then(({ data }) => {
         setBalances(data);
       })

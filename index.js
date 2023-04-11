@@ -1,20 +1,20 @@
 const Moralis = require("moralis").default;
 
 const express = require("express");
-const cors = require("cors");
-
+// const cors = require("cors");
+const path = require("path");
 const { EvmChain } = require("@moralisweb3/common-evm-utils");
 
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(
-  cors({
-    origin: true,
-    // origin: "http://localhost:3000",
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: true,
+//     // origin: "http://localhost:3000",
+//     credentials: true,
+//   })
+// );
 app.use(express.json());
 
 // allow access to React app domain
@@ -97,12 +97,26 @@ app.post("/nfts", async(req, res)=>{
 
 
 
-if( process.env.NODE_ENV == "production"){
-  app.use(express.static("client/build"));
-  const path = require("path");
+// if( process.env.NODE_ENV == "production"){
+//   app.use(express.static("client/build"));
+//   const path = require("path");
+//   app.get("*", (req, res) => {
+//       res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+//   })
+// }
+
+if (process.env.PRODUCTION === "PRODUCTION") {
+  app.use(express.static(path.join(__dirname, "./client/build")));
   app.get("*", (req, res) => {
-      res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
-  })
+    res.sendFile(path.resolve(__dirname, "./client/build/index.html"));
+  });
+} else {
+  app.get("/", (req, res, next) => {
+    res.status(200).json({
+      success: true,
+      message: "app is running",
+    });
+  });
 }
 
 
